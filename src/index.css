@@ -1,13 +1,622 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.join-page {
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    width: 488px;
+    height: 77vh;
+    background-image: linear-gradient(rgb(78, 78, 247),rgb(210, 210, 241));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+.app-title {
+    margin-top: 7px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: .2rem;
+    word-spacing: .3rem;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.signin-box {
+    margin-top: 45px;
+    height: 44%;
+    width: 77%;
+    margin: auto;
+    background-color: blue;
+    box-shadow: 2px 2px 3px 3px rgb(0, 0, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.join {
+    color: white;
+    font-weight: 600;
+    font-size: 28px;
+    letter-spacing: .5px;
+    margin-top: 11px;
+    position: relative;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.join::after {
+    content: '';
+    position: absolute;
+    left: -95px;
+    top: 44px;
+    width: 244px;
+    height: 2.2px;
+    background-color: white;
+     
+}
+.name-box {
+    margin-top: 50px;
+    width: 244px;
+    font-size: 17px;
+    padding: 5px 8px;
+    outline: none;
+    border: none;
+    background-color: rgb(206, 206, 252);
+    text-align: center;
+    
+}
+.room-box {
+    margin-top: 7px;
+    width: 244px;
+    font-size: 17px;
+    padding: 5px 8px;
+    outline: none;
+    border: none;
+    background-color: rgb(206, 206, 252);
+    text-align: center;
+    
+}
+.signin-btn {
+    margin-top: 11px;
+    width: 244px;
+    background-color: white;
+    outline: none;
+    border: none;
+    color: blue;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 7px 12px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.signin-btn:hover {
+    cursor: pointer;
+    transform: scale(.92);
+}
+.chat-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.chat-page .online-users {
+    height: 71vh;
+    width: 466px;
+    opacity: 0.77;
+    position: absolute;
+    top: 0;
+    margin-top: 14.5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+   
+    background-color: black;
+    overflow-y: auto;
 }
+.online-users .user-list {
+    height: 100%;
+    width: 100%;
+    padding: 4px 8px;
+    
+   
+}
+.online-users .user-list .user-box {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    padding: 6px 12px;
+    border-bottom: 3px solid white;
+}
+.user-list .user-box h2 {
+    color: white;
+    font-size: 17px;
+    margin-left: 3px;
+    
+}
+.msg-box {
+    width: 466px;
+    height: 71vh;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+.chat-page .sendmsg-box {
+    height: 7vh;
+    width: 466px;
+    position: sticky;
+}
+.chat-page .info-box {
+    width: 466px;
+    height: 7vh;
+    display: flex;
+    position: sticky;
+}
+.infobar {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+   
+    background-color: blue;
+}
+.infobar .left-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.infobar .left-cont h2 {
+    padding:  0 5px;
+    color: white;
+}
+.infobar .left-cont p {
+    color: rgb(74, 231, 74);
+    margin-left: 20px;
+    margin-top: 3px;
+}
+.infobar .right-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+    width: 44%;
+   
+}
+.infobar .info-btnbox {
+    width: 43%;
+    text-align: end;
+}
+.infobar button {
+    
+    background-color: white;
+    color: blue;
+    height: 5vh;
+    width: 82px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 14px;
+    border: none;
+    outline: none;
+}
+.infobar button:hover {
+    cursor: pointer;
+}
+.infobar .right-cont .inner-right-cont {
+    display: flex;
+    align-items: center;
+    
+    
+}
+.infobar .right-cont h2 {
+    color: white;
+    text-transform: capitalize;
+    margin-left: 4px;
+    font-size: 22px;
+}
+.infobar .right-cont p {
+    color: white;
+}
+.form-box {
+    display: flex;
+    width:100%; 
+    height: 7vh;
+    
+}
+.form {
+    width: 77%;
+    height: 100%;
+}
+.form input {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    font-size: 17px;
+    padding: 4px 10px;
+    outline: none;
+    border: 2px solid blue;
+}
+.form-box button {
+    width: 23%;
+    height: 100%;
+    background-color: blue;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 17px;
+    font-weight: 600;
+}
+.form-box button:hover {
+    cursor: pointer;
+}
+.msg-area {
+    width: 100%;
+    padding: 4px 6px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.send-msg {
+    float: left;
+    clear: both;
+    background-color: blue;
+    max-width: 66%;
+    padding: 5px 12px;
+    margin: 5px 5px;
+    border-radius: 7px;
+    font-size: 16px;
+    color: white;
+    
+}
+.rcv-msg {
+    float: right;
+    clear: both;
+    background-color: rgba(37, 35, 35, 0.589);
+    max-width: 66%;
+    padding: 5px 12px;
+    margin: 5px 5px;
+    border-radius: 7px;
+    text-transform: capitalize;
+    color: white;
+    font-size: 16px;
+}
+.admin-msg {
+    font-size: 16px;
+    text-align: center;
+    clear: both;
+    background-color: rgba(218, 241, 171, 0.884);
+    max-width: 66%;
+    padding: 5px 12px;
+    margin: 5px 77px;
+    border-radius: 7px;
+    color: rgb(61, 53, 53);
+    text-transform: capitalize;
+}
+.color-admin {
+    color: rgba(46, 49, 37, 0.445);
+}
+.sendername {
+    font-size: 17px;
+    font-weight: 600;
+}
+.text {
+    font-size: 16px;
+}
+::-webkit-scrollbar {
+    width: 11px;
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(blue,rgba(37, 35, 35, 0.589));
+}
+@media screen and (max-width : 500px) {
+    .join-page {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(rgb(78, 78, 247),rgb(210, 210, 241));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       
+    }
+    .app-title {
+        margin-top: 7px;
+        color: #fff;
+        font-size: 21px;
+        font-weight: 800;
+        letter-spacing: .1rem;
+        word-spacing: .2rem;
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .signin-box {
+        margin-top: 33px;
+        height: 44%;
+        width: 77%;
+        margin: auto;
+        background-color: blue;
+        box-shadow: 2px 2px 3px 3px rgb(0, 0, 255);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .join {
+        color: white;
+        font-weight: 600;
+        font-size: 24px;
+        letter-spacing: .3px;
+        margin-top: 8px;
+        position: relative;
+        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .join::after {
+        content: '';
+        position: absolute;
+        left: -98px;
+        top: 44px;
+        width: 242px;
+        height: 2.2px;
+        background-color: white;
+         
+    }
+    .name-box {
+        margin-top: 50px;
+        width: 88%;
+        font-size: 17px;
+        padding: 5px 8px;
+        outline: none;
+        border: none;
+        background-color: rgb(206, 206, 252);
+        text-align: center;
+        
+    }
+    .room-box {
+        margin-top: 7px;
+        width: 88%;
+        font-size: 17px;
+        padding: 5px 8px;
+        outline: none;
+        border: none;
+        background-color: rgb(206, 206, 252);
+        text-align: center;
+        
+    }
+    .signin-btn {
+        margin-top: 11px;
+        width: 230px;
+        background-color: white;
+        outline: none;
+        border: none;
+        color: blue;
+        font-size: 17px;
+        font-weight: 600;
+        padding: 7px 12px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .signin-btn:hover {
+        cursor: pointer;
+        transform: scale(.94);
+    }
+    .chat-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+       margin: 0;
+       padding: 0;
+    }
+    
+    .chat-page .online-users {
+        height: 86vh;
+        width: 100%;
+        opacity: 0.77;
+        position: absolute;
+        top: 0;
+        margin-top: 7vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+       
+        background-color: black;
+        overflow-y: auto;
+    }
+    .online-users .user-list {
+        height: 100%;
+        width: 100%;
+        padding: 4px 8px;
+        
+       
+    }
+    .online-users .user-list .user-box {
+        margin-top: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: capitalize;
+        padding: 6px 12px;
+        border-bottom: 3px solid white;
+    }
+    .user-list .user-box h2 {
+        color: white;
+        font-size: 17px;
+        margin-left: 3px;
+        
+    }
+    .msg-box {
+        width: 100%;
+        height: 86vh;
+        overflow-y: auto;
+        scroll-behavior: smooth;
+    }
+    .chat-page .sendmsg-box {
+        height: 7vh;
+        width: 100%;
+        position: sticky;
+    }
+    .chat-page .info-box {
+        width: 100%;
+        height: 7vh;
+        display: flex;
+        position: sticky;
+    }
+    .infobar {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background-color: blue;
+    }
+    .infobar .left-cont {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .infobar .left-cont h2 {
+        padding:  0 5px;
+        color: white;
+    }
+    .infobar .left-cont p {
+        color: rgb(74, 231, 74);
+        margin-left: 20px;
+        margin-top: 3px;
+    }
+    .infobar .right-cont {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 15px;
+        width: 40%;
+    }
+    .infobar .info-btnbox {
+        width: 44%;
+    }
+    .infobar button {
+        background-color: white;
+        color: blue;
+        height: 5vh;
+        width: 83px;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 11px;
+        border: none;
+        outline: none;
+    }
+    .infobar button:hover {
+        cursor: pointer;
+    }
+    .infobar .right-cont .inner-right-cont {
+        display: flex;
+        align-items: center;
+        
+        
+    }
+    .infobar .right-cont h2 {
+        color: white;
+        text-transform: capitalize;
+        margin-left: 4px;
+        font-size: 22px;
+    }
+    .infobar .right-cont p {
+        color: white;
+    }
+    .form-box {
+        display: flex;
+        width:100%; 
+        height: 7vh;
+        
+    }
+    .form {
+        width: 77%;
+        height: 100%;
+    }
+    .form input {
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        font-size: 17px;
+        padding: 4px 10px;
+        outline: none;
+        border: 2px solid blue;
+    }
+    .form-box button {
+        width: 23%;
+        height: 100%;
+        background-color: blue;
+        color: white;
+        outline: none;
+        border: none;
+        font-size: 17px;
+        font-weight: 600;
+    }
+    .form-box button:hover {
+        cursor: pointer;
+    }
+    .msg-area {
+        width: 100%;
+        padding: 4px 6px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    .send-msg {
+        float: left;
+        clear: both;
+        background-color: blue;
+        max-width: 68%;
+        padding: 4px 8px;
+        margin: 4px 4px;
+        border-radius: 7px;
+        font-size: 14px;
+        color: white;
+        
+    }
+    .rcv-msg {
+        float: right;
+        clear: both;
+        background-color: rgba(37, 35, 35, 0.589);
+        max-width: 68%;
+        padding: 4px 8px;
+        margin: 4px 4px;
+        border-radius: 7px;
+        text-transform: capitalize;
+        color: white;
+        font-size: 14px;
+    }
+    .admin-msg {
+        font-size: 14px;
+        text-align: center;
+        clear: both;
+        background-color: rgba(218, 241, 171, 0.884);
+        max-width: 88%;
+        padding: 4px 8px;
+        margin: 4px 44px;
+        border-radius: 7px;
+        color: rgb(61, 53, 53);
+        text-transform: capitalize;
+    }
+    .sendername {
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .text {
+        font-size: 14px;
+    }
+    ::-webkit-scrollbar {
+        width: 7px;
+        background-color: white;
+    }
+}
+
+
+
